@@ -1,5 +1,9 @@
 # R Markdown websites and bleeding environments
 
+**UPDATE**: [@jdblischak](https://github.com/jdblischak) has created a custom site generator that solves this problem. See https://github.com/andrewheiss/rmarkdown-website-envs/pull/1 for more details. That pull request is the beginning of a nascent **safesite** package.
+
+---
+
 While **bookdown** and **blogdown** knit collections of `.Rmd` files in their own standalone environments, [R Markdown websites](https://rmarkdown.rstudio.com/rmarkdown_websites.html) ([by design](https://github.com/rstudio/rmarkdown/issues/1326#issuecomment-382957907)) do not. Instead, each `.Rmd` shares a global environment, which causes a few side effects with namespaces and variables bleeding into each other.
 
 This mini project shows what happens and offers some solutions.
